@@ -1,2 +1,4 @@
 TSP 297
-![alt text](./qor.gif)
+
+
+![alt text](/qor.gif)
