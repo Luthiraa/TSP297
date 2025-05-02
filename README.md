@@ -1,4 +1,45 @@
-TSP 297
+# Traveling Courier Optimization (ECE297 M4)
 
+## Overview
+This project implements a **delivery routing algorithm** for the ECE297 course milestone using a combination of:
+- **Regret Insertion** for initial path construction  
+- **Multithreaded Dijkstra** for distance matrix computation  
+- **Local Search Improvements** (2-opt, 3-opt, 4-opt)  
+- **Shake-based perturbations** to escape local minima  
 
-![alt text](/qor.gif)
+The goal is to compute the most efficient route for a courier to perform a set of pickup and dropoff tasks starting and ending at any depot.
+
+---
+
+## Algorithm Pipeline
+
+### 1. Input Preprocessing
+- Nodes are classified as:
+  - `depotType`: Starting/ending points
+  - `pickupType` and `dropoffType`: Delivery pairs
+- Nodes are indexed: `0..depots`, `depots..depots+pickups`, `dropoffs`
+
+### 2. Distance Matrix Generation
+- Uses **multi-threaded Dijkstra** to compute travel times between all nodes
+- Turn penalties included
+- Results stored in a `dist[i][j]` matrix for fast lookup
+
+### 3. Initial Path Construction
+- Applies **regret insertion heuristic**:
+  - Greedily insert pickup/dropoff pairs with the highest regret (difference between best and second-best insertion)
+  - Chooses best depot pair for start and end based on overall cost
+
+### 4. Route Refinement
+- Run **2-opt**, **3-opt**, and **4-opt** moves while ensuring pickup-before-dropoff constraints
+- Use **shake2** perturbation to escape local optima by swapping delivery pairs
+- Optimize with **multithreaded 3-opt and 4-opt**
+
+### 5. Final Path Construction
+- Remove consecutive duplicate intersections
+- Construct valid subpaths using `findPathBetweenIntersections()`
+- Return result as a list of `CourierSubPath` objects
+
+---
+
+## Pipeline Illustration
+
