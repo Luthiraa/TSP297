@@ -2,8 +2,11 @@
 
 AIM is a fully-fledged mapping application built with C++ (backend), GTK (C++ library for UI elements), CSS, and the OpenStreetMap library. The goal of this map was to create a software that centialzies and consolidates information into one place to elimiate the need for users to seek inforamtion from external source, and this was done through an LLM powered agent [repo: `https://github.com/Luthiraa/297Agent`].
 
-Collaborators: 
-@k-chhajer
+## Collaborators
+
+- [@k-chhajer](https://github.com/k-chhajer)
+- [@gracehao15](https://github.com/gracehao15)
+
 ## Overview
 This project implements a **delivery routing algorithm** for the ECE297 course milestone using a combination of:
 - **Regret Insertion** for initial path construction  
