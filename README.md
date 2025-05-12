@@ -1,4 +1,4 @@
-# Traveling Courier Optimization (ECE297 M4)
+# A.I.M. - Artificially Intelligent Maps
 
 ## Overview
 This project implements a **delivery routing algorithm** for the ECE297 course milestone using a combination of:
@@ -50,22 +50,10 @@ The goal is to compute the most efficient route for a courier to perform a set o
 
 ![alt text](/qor.gif)
 
----
-
-## Key Components
-
-### Data Structures
-- `nodeType`: Represents depot/pickup/dropoff with delivery ID
-- `State`: For Dijkstra (intersection, last street ID, cost)
-- `InsertionOption`: Holds best/second-best insertion costs for a delivery
-
 ### Optimization Techniques
 - **Shake2**: Swaps two delivery requests (pickup & dropoff)
 - **Greedy regret insertion**: Builds the initial route intelligently
 - **Multithreading**: Improves performance in 3-opt/4-opt search
 - **Valid order enforcement**: Maintains delivery legality
 
----
-
-## Multithreading Strategy
 
