@@ -43,7 +43,7 @@ The goal is to compute the most efficient route for a courier to perform a set o
 
 ## Pipeline Illustration
 
-![pipeline illustration](/diagram.png)
+![pipeline illustration](/diagram2.png)
 ---
 
 ## Visual Output
