@@ -7,7 +7,23 @@ AIM is a fully-fledged mapping application built with C++ (backend), GTK (C++ li
 - [@k-chhajer](https://github.com/k-chhajer)
 - [@gracehao15](https://github.com/gracehao15)
 
-## Overview
+
+---
+
+## Final Product
+![map overview](/mapoverview.png)
+
+# Agent Implementation with TSP 
+
+![map overview](/chatbotTSP.png)
+
+# Directions/Navigation Feature
+
+![nav](/nav.gif)
+![search nav](/directions.gif)
+
+
+## Algorithm Overview
 This project implements a **delivery routing algorithm** for the ECE297 course milestone using a combination of:
 - **Regret Insertion** for initial path construction  
 - **Multithreaded Dijkstra** for distance matrix computation  
@@ -53,7 +69,7 @@ The goal is to compute the most efficient route for a courier to perform a set o
 ![pipeline illustration](/diagram2.png)
 ---
 
-## Visual Output
+## Algorithm Progression
 
 ![alt text](/qor.gif)
 
